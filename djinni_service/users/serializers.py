@@ -10,7 +10,7 @@ class UserSignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewUser
-        fields = ("email", "password", "user_type")
+        fields = ("pk", "email", "password", "user_type")
 
     def create(self, validated_data):
         user = NewUser.objects.create_user(
